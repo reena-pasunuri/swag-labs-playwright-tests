@@ -5,11 +5,13 @@
 This document outlines confirmed and potential bugs found during automated and exploratory functional testing of Swag Labs. The goal is to evaluate how reliably core workflows function, identify regressions, and assess the consistency of UI behavior across user roles.
 
 
-| **Severity (Impact of the bug on the application)**          | **Priority (Urgency to fix the bug):** 
-| Critical: Breaks core functionality or causes data loss      | P1: Needs immediate fix before release 
-| High: Blocks a major feature                                 | P2: Should be fixed soon, but not blocking
-| Medium: Affects usability or a key user action               | P3: Can be fixed later or in the next cycle.
-| Low: Minor issue
+| **Severity**                                            | **Priority**                                  |
+|---------------------------------------------------------|-----------------------------------------------|
+| Critical: Breaks core functionality or causes data loss | P1: Needs immediate fix before release        |
+| High: Blocks a major feature                            | P2: Should be fixed soon, but not blocking    |
+| Medium: Affects usability or a key user action          | P3: Can be fixed later or in the next cycle   |
+| Low: Minor issue                                        | -                                             |
+
 
 
 ## Bug 1: "Remove" Button Remains After Item is Removed from Cart
@@ -38,11 +40,13 @@ Priority: P2
 Severity: High
 Priority: P1
 
-| **Username**             | **Behavior**
-| standard_user            | Works as expected 
-| locked_out_user          | Displays message: "Epic sadface: Sorry, this user has been locked out.".
-| problem_user             | Logs in, but **images do not load** and cart/product UI behaves unpredictably.
-| performance_glitch_user  | Slow loading of pages. Intermittent delays in cart updates, item add/remove actions.
+| **Username**              | **Behavior**                                                                  |
+|---------------------------|-------------------------------------------------------------------------------|
+| `standard_user`           | Works as expected                                                             |
+| `locked_out_user`         | Displays message: "Epic sadface: Sorry, this user has been locked out."       |
+| `problem_user`            | Logs in, but **images do not load** and cart/product UI behaves unpredictably |
+| `performance_glitch_user` | Slow page loads; delayed cart updates and add/remove actions                  |
+
 
 **Expected Result**  
 - All users (excluding locked_out_user) should have consistent experiences.
