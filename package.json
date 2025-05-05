@@ -1,0 +1,13 @@
+{
+  "name": "swag-labs-automation",
+  "version": "1.0.0",
+  "description": "Playwright automation framework for Swag Labs (SauceDemo).",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "typescript": "^4.9.5"
+  }
+}
