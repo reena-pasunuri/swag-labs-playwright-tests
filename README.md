@@ -67,7 +67,12 @@ View Reports: After test execution, Playwright will generate a detailed HTML rep
 
     npx playwright show-report
 
+## Troubleshooting Notes
+- The [Swag Labs](https://www.saucedemo.com/v1/) site may respond slowly or behave inconsistently at times.
+- If you encounter test timeouts, run tests with increased timeout:
 
+    npx playwright test --timeout=60000
+  
 ## Other documents
 - [Test Plan](TEST_PLAN.md)
 - [Bug Report](BUG_REPORT.md)
